@@ -1,0 +1,87 @@
+/*
+ * Color roles, same names as reading_app (palettes.ts): components use the
+ * role (--fg, --card, --accent), never a hue, and each theme gives every role
+ * its own value.
+ *
+ * Light: the make a wish design. Dark: reading_app's dark palette.
+ * Theme choice: no data-theme → follows the OS; data-theme="light" | "dark"
+ * → the user's pick (set in theme.ts and, before first paint, in index.html).
+ */
+
+:root {
+  color-scheme: light;
+
+  --bg-top: #edf0f3;
+  --bg-bottom: #edf0f3;
+  --card: #ffffff;
+  --card-strong: #f6f8fa;
+  --border: #dde2e7;
+  --fg: #1c1f23;
+  --fg-muted: #5b6470;
+  --fg-faint: #626b76;
+  --accent-light: #4f8796;
+  --accent: #2e6271;
+  --accent-dark: #224a55;
+  --accent-fg: #ffffff;
+  --accent-text: #2e6271;
+  --highlight: #f6d9cc;
+  --tab-bar: rgba(255, 255, 255, 0.94);
+  --sheet: #ffffff;
+  --backdrop: rgba(28, 31, 35, 0.35);
+  --danger: #b3362f;
+  --success: #23794a;
+}
+
+/*
+ * The dark values appear twice on purpose: once for "follow the OS" and once
+ * for an explicit pick. Keep both blocks identical.
+ */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+
+    --bg-top: #3a2a78;
+    --bg-bottom: #140e2e;
+    --card: rgba(255, 255, 255, 0.07);
+    --card-strong: rgba(255, 255, 255, 0.12);
+    --border: rgba(255, 255, 255, 0.1);
+    --fg: #f4efff;
+    --fg-muted: #b9aedb;
+    --fg-faint: #8f84b8;
+    --accent-light: #f7cba4;
+    --accent: #f0a877;
+    --accent-dark: #e2834f;
+    --accent-fg: #2a1a12;
+    --accent-text: #f7cba4;
+    --highlight: rgba(247, 203, 164, 0.14);
+    --tab-bar: rgba(30, 22, 69, 0.96);
+    --sheet: #241b55;
+    --backdrop: rgba(8, 5, 20, 0.6);
+    --danger: #ff8a8a;
+    --success: #8ee0b0;
+  }
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --bg-top: #3a2a78;
+  --bg-bottom: #140e2e;
+  --card: rgba(255, 255, 255, 0.07);
+  --card-strong: rgba(255, 255, 255, 0.12);
+  --border: rgba(255, 255, 255, 0.1);
+  --fg: #f4efff;
+  --fg-muted: #b9aedb;
+  --fg-faint: #8f84b8;
+  --accent-light: #f7cba4;
+  --accent: #f0a877;
+  --accent-dark: #e2834f;
+  --accent-fg: #2a1a12;
+  --accent-text: #f7cba4;
+  --highlight: rgba(247, 203, 164, 0.14);
+  --tab-bar: rgba(30, 22, 69, 0.96);
+  --sheet: #241b55;
+  --backdrop: rgba(8, 5, 20, 0.6);
+  --danger: #ff8a8a;
+  --success: #8ee0b0;
+}

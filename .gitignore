@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.vercel/
+*.log
+.DS_Store
+
+# Secrets: never commit these
+.env
+.env.*
+!.env.example
+
+# Personal planning notes and Node.js lessons (kept locally, not published)
+TODO.md
+DEPLOY.md
+docs/learn-node/

@@ -1,0 +1,11 @@
+# Generated or managed by tools — never format by hand
+node_modules
+dist
+build
+coverage
+.vercel
+pnpm-lock.yaml
+supabase/.temp
+
+# Docs are written by hand; keep their formatting as-is
+*.md

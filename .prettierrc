@@ -1,0 +1,28 @@
+{
+  "singleQuote": true,
+  "trailingComma": "all",
+  "plugins": ["@ianvs/prettier-plugin-sort-imports"],
+  "importOrder": [
+    "<BUILTIN_MODULES>",
+    "",
+    "^react$",
+    "^react-dom(/.*)?$",
+    "^react-.*$",
+    "",
+    "<THIRD_PARTY_MODULES>",
+    "",
+    "^@wish/.*$",
+    "",
+    "^@/components/.*$",
+    "",
+    "^@/assets/.*$",
+    "\\.(png|jpe?g|gif|webp|svg)$",
+    "",
+    "^@/.*$",
+    "^[.]",
+    "",
+    "\\.css$"
+  ],
+  "importOrderTypeScriptVersion": "5.0.0",
+  "importOrderParserPlugins": ["typescript", "jsx"]
+}
